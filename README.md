@@ -1,6 +1,6 @@
 # Neon Ronin
 
-A compact third-person 3D combat game built with Three.js, React, and Vinext. One ruined techno-temple courtyard, an energy katana, and three escalating waves. All models, materials, animation, effects, and sound are generated locally; the game needs no accounts, gameplay server, external assets, or audio downloads.
+A compact third-person 3D combat game built with Three.js, React, and Vinext. Three ruined techno-temple arenas, a red energy katana, and three escalating waves. Character GLBs and procedural scenery are served locally; the game needs no accounts, gameplay server, or audio downloads.
 
 ## Run
 
@@ -16,7 +16,9 @@ Open the local address printed by the server. Requires a desktop browser with We
 | Input | Action |
 | --- | --- |
 | WASD | Move relative to the camera |
-| Mouse | Aim toward the cursor; move to the left/right edge to orbit the elevated camera |
+| Mouse | Aim toward the cursor; left/right edge gives limited elevated orbit |
+| Mouse wheel | Zoom in / out within gameplay bounds |
+| Q / E | Orbit left / right within the elevated camera range |
 | Left click / hold | Chain the three light sword attacks |
 | Right click / hold | Heavy finishing slash |
 | Space | Dodge in the movement direction, or toward your aim when stationary |
@@ -49,4 +51,4 @@ Browser checks confirmed the rendered arena, start/restart, movement, attacks, d
 - `lib/game/audio.js`: synthesized action sounds and temple ambience.
 - `app/page.tsx`, `app/globals.css`: game interface.
 
-The environment is a fixed authored arena. Seeded variation is only used for surface wear, vegetation, and particles; it does not generate levels. No reference images are shipped as gameplay backgrounds.
+Each completed wave leads through a short fade to the next arena: Silent Shrine, Ember Gates, then Moon Terrace. These reuse the same procedural art with distinct pillar layouts, floor inlays, shrine placement and lighting. Reinforcements remain in the current arena. No reference images are shipped as gameplay backgrounds.

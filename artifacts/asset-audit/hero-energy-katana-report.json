@@ -1,0 +1,25 @@
+{
+  "file_bytes": 6160428,
+  "triangles": 17641,
+  "meshes": 1,
+  "skins": 0,
+  "joints": [],
+  "animations": 0,
+  "images": [
+    {
+      "mime": "image/webp",
+      "bytes": 3331132,
+      "sha256": "6213e8db30b34fccbb6c976ea2165210dd7f93744b5c492d6f7e5054fb2fe171"
+    },
+    {
+      "mime": "image/webp",
+      "bytes": 1824732,
+      "sha256": "ee32ac3de707c8f0fe11fd9e472944f464781e28733975b53d97dbadb80f2abc"
+    }
+  ],
+  "source_sha256": "34e97275586fba762219ef738a7b2c296bec0356ab2f3ea7ad1a1872d62ee36d",
+  "materials_exact": true,
+  "original_file": "incoming-assets\\ChatGPT Image Sep 17 2026 03_42_06 PM.glb",
+  "source_triangles": 951472,
+  "output": "public\\assets\\models\\hero-energy-katana-final.glb"
+}

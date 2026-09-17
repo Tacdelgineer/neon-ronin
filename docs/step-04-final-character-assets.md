@@ -1,5 +1,13 @@
 # Step 04 — Final character assets
 
+## Gameplay polish milestone — 2026-09-17
+
+Replaced the active hero katana with the supplied `incoming-assets/ChatGPT Image Sep 17 2026 03_42_06 PM.glb`, preserving that original and the previous katana. The derived `hero-energy-katana-final.glb` has 17,641 triangles (~6.2 MB); existing sockets/draw-stow and combat timing are retained. Its blade uses red emissive material and the existing bloom; slash effects now match.
+
+Exaggerated the existing idle/run/attack/dodge clips and added small visual body lean/bob. Default camera is closer; wheel zoom is bounded, Q/E and existing edge orbit stay within an elevated front-side range. Waves now progress through Silent Shrine → Ember Gates → Moon Terrace, with a fade/reposition during the existing four-second break, distinct pillars/floor inlays/shrine placement/lighting, matching collision and environment cleanup. Reinforcement packs stay in their wave's arena.
+
+Validation: existing 23 tests run once and pass; TypeScript and production build run once and pass (existing build warnings only). One short Edge smoke passes all four hero states, new sword draw/stow, zoom both directions, Q/E orbit, and first-wave arena transition with no console/runtime errors; a fixed strike capture confirms the blade at the gameplay camera. No wave replay or extended performance pass. Reproduce the asset with `tools/forge3d-step04/energy-katana.py`; short smoke: `tools/forge3d-step04/polish-smoke.cjs` (default local URL port 3000). Manually assess sword/motion feel and camera distance during normal play. No Skill or new dependency added.
+
 Starting checkpoint: `5c7f09db94ecaf4885f456c82bff6e0ac8f20978`. Batch identification is in [asset-manifest.md](asset-manifest.md). Originals and all previous public GLBs remain unchanged.
 
 The upgraded hero is used: clearer anatomy, separated stance, longer scarf, and no fused sheathed sword. Step 02's weld/decimation, anatomical weighting/contact cleanup and exact-texture exporter are reused. Step 03's four pose functions are reused on a refitted 20-bone skeleton. Existing simulation remains authoritative.
