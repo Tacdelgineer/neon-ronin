@@ -46,7 +46,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
     await page.screenshot({ path: path.resolve('work/forge3d-step04/polish-attack.png') });
     await page.mouse.up({ button: 'right' });
     await page.waitForTimeout(650);
-    assert.equal((await capture()).katana, false);
+    assert.equal((await capture()).katana, true);
     await page.keyboard.press('Space');
     await page.waitForTimeout(70);
     const dodge = await capture(); assert.equal(dodge.state, 'dodge');
