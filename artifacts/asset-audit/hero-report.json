@@ -1,0 +1,53 @@
+{
+  "file_bytes": 28475188,
+  "triangles": 298580,
+  "meshes": 1,
+  "skins": 1,
+  "joints": [
+    "root",
+    "hips",
+    "spine",
+    "chest",
+    "neck",
+    "head",
+    "clavicle.R",
+    "upper_arm.R",
+    "lower_arm.R",
+    "hand.R",
+    "clavicle.L",
+    "upper_arm.L",
+    "lower_arm.L",
+    "hand.L",
+    "upper_leg.R",
+    "lower_leg.R",
+    "foot.R",
+    "upper_leg.L",
+    "lower_leg.L",
+    "foot.L"
+  ],
+  "animations": 4,
+  "images": [
+    {
+      "mime": "image/webp",
+      "bytes": 3635348,
+      "sha256": "bf984d3e99379c44db7cb3188d2bbb508671871d4711e74cbbf75c93f02ffdcc"
+    },
+    {
+      "mime": "image/webp",
+      "bytes": 1467624,
+      "sha256": "cd0ecb598aee1465766b9787da78fa14b31e8a6d762f91d416ebfcceac7015ab"
+    }
+  ],
+  "source_sha256": "f0b19b56113ae4d988aac11daed2a2df40e338fd9d091744b61687d07b3d19e4",
+  "materials_exact": true,
+  "asset": "hero",
+  "original_file": "docs/ChatGPT Image Sep 16 2026 05_15_40 PM.glb",
+  "source_triangles": 997783,
+  "output": "public\\assets\\models\\hero-final.glb",
+  "sha256": "6462f679723c2d36c9df4cea4cb806a5136a4be61214746fbaae07383df16eb9",
+  "skin_strategy": {
+    "method": "Step 02 anatomical chains and rigid accessory corrections",
+    "contact_faces_removed": 873,
+    "scrap_faces_removed": 325
+  }
+}

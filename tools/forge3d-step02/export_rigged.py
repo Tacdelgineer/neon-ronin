@@ -43,9 +43,9 @@ def restore_original_textures(exported,destination):
     total=12+8+len(js)+8+len(binary)
     destination.write_bytes(struct.pack('<III',0x46546c67,2,total)+struct.pack('<II',len(js),0x4e4f534a)+js+struct.pack('<II',len(binary),0x004e4942)+binary)
     jj,nb=read_glb(destination)
-    assert all(image_bytes(jj,nb,i)==image_bytes(original,ob,i) for i in range(2))
+    assert all(image_bytes(jj,nb,i)==image_bytes(original,ob,i) for i in range(len(original['images'])))
     report=dict(file_bytes=destination.stat().st_size,triangles=sum(jj['accessors'][p['indices']]['count']//3 for m in jj['meshes'] for p in m['primitives']),
-        meshes=len(jj['meshes']),skins=len(jj['skins']),joints=[jj['nodes'][i]['name'] for i in jj['skins'][0]['joints']],
+        meshes=len(jj['meshes']),skins=len(jj.get('skins',[])),joints=[jj['nodes'][i]['name'] for i in jj.get('skins',[{'joints':[]}])[0]['joints']],
         animations=len(jj.get('animations',[])),images=[dict(mime=i['mimeType'],bytes=len(image_bytes(jj,nb,k)),sha256=hashlib.sha256(image_bytes(jj,nb,k)).hexdigest()) for k,i in enumerate(jj['images'])],
         source_sha256=hashlib.sha256(SOURCE.read_bytes()).hexdigest(),materials_exact=jj['materials']==original['materials'])
     (WORK/'export-report.json').write_text(json.dumps(report,indent=2))

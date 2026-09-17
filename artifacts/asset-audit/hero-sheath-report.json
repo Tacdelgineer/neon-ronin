@@ -1,0 +1,27 @@
+{
+  "file_bytes": 3875068,
+  "triangles": 9231,
+  "meshes": 1,
+  "skins": 0,
+  "joints": [],
+  "animations": 0,
+  "images": [
+    {
+      "mime": "image/webp",
+      "bytes": 2214096,
+      "sha256": "425ae53c53fc8418b2ab18ca9ea2eaa8404acc156594cacf65829031b6c9aa26"
+    },
+    {
+      "mime": "image/webp",
+      "bytes": 1196860,
+      "sha256": "433259182de14c027485b6d52f1d3856242a1d57cc74b110f44fb004b2e727fd"
+    }
+  ],
+  "source_sha256": "33c627006dccdfcd56e22548e3a1626269aa064feb4a995aac695f7da9712cbd",
+  "materials_exact": true,
+  "asset": "hero-sheath",
+  "original_file": "docs/ChatGPT Image Sep 16 2026 04_55_07 PM.glb",
+  "source_triangles": 958449,
+  "output": "public\\assets\\models\\hero-sheath-final.glb",
+  "sha256": "e6f61ea922b2ddd1d2788f68cc6130d584dccc687ce7e6e02f045940ff7a88a0"
+}

@@ -1,0 +1,27 @@
+{
+  "file_bytes": 4371720,
+  "triangles": 13759,
+  "meshes": 1,
+  "skins": 0,
+  "joints": [],
+  "animations": 0,
+  "images": [
+    {
+      "mime": "image/webp",
+      "bytes": 2404788,
+      "sha256": "50e1692083e2767961798f89155de39816102f86e236058df84974ab2cb96f43"
+    },
+    {
+      "mime": "image/webp",
+      "bytes": 1179712,
+      "sha256": "72adb9fddf514eaf076402952df53ccab3c5c80dba6144f536d9e99683fb10a7"
+    }
+  ],
+  "source_sha256": "67b718af630eaa1f9e72e4974fd16f673d81497637fe2b8201d2c9a26e65c4dc",
+  "materials_exact": true,
+  "asset": "hero-katana",
+  "original_file": "docs/ChatGPT Image Sep 16 2026 04_55_11 PM.glb",
+  "source_triangles": 990187,
+  "output": "public\\assets\\models\\hero-katana-final.glb",
+  "sha256": "64594c5de57cfe3e57c247adfdf9386eb9ef4ee00fd033f90910ae0b9fbab380"
+}
