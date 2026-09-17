@@ -1,0 +1,27 @@
+{
+  "file_bytes": 5746992,
+  "triangles": 31821,
+  "meshes": 1,
+  "skins": 0,
+  "joints": [],
+  "animations": 0,
+  "images": [
+    {
+      "mime": "image/webp",
+      "bytes": 3049960,
+      "sha256": "2f2a22706560aea0561a3655b3602a3db7c30afc00af5e3ca82c1098f5a98d36"
+    },
+    {
+      "mime": "image/webp",
+      "bytes": 940188,
+      "sha256": "cdc126dea899301f4ef273f75d48ed6c7804607718bfdb194f420f1b6886b1a7"
+    }
+  ],
+  "source_sha256": "d88664afe50d7f4e27678d903a4e87967e28a525b5ede0d4abd4ad2fc200e1e5",
+  "materials_exact": true,
+  "asset": "enemy-b-blade",
+  "original_file": "docs/ChatGPT Image Sep 16 2026 04_51_53 PM (1).glb",
+  "source_triangles": 949360,
+  "output": "public\\assets\\models\\enemy-b-blade-final.glb",
+  "sha256": "b2b2b2eeef1811e3d4b59422b92b236d81dcc23a20e264bc94345232bdbe921b"
+}

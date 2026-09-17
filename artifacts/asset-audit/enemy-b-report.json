@@ -1,0 +1,52 @@
+{
+  "file_bytes": 27402160,
+  "triangles": 259862,
+  "meshes": 1,
+  "skins": 1,
+  "joints": [
+    "root",
+    "hips",
+    "spine",
+    "chest",
+    "neck",
+    "head",
+    "clavicle.R",
+    "upper_arm.R",
+    "lower_arm.R",
+    "hand.R",
+    "clavicle.L",
+    "upper_arm.L",
+    "lower_arm.L",
+    "hand.L",
+    "upper_leg.R",
+    "lower_leg.R",
+    "foot.R",
+    "upper_leg.L",
+    "lower_leg.L",
+    "foot.L"
+  ],
+  "animations": 5,
+  "images": [
+    {
+      "mime": "image/webp",
+      "bytes": 4131780,
+      "sha256": "4fcac88f59062042472990a35e3a3e41fd0dca14bac55468c8f3ce2ceb15458f"
+    },
+    {
+      "mime": "image/webp",
+      "bytes": 1494252,
+      "sha256": "9ee344517296fa380fc599e60cbb121f23298e53920ca0f882972f2c92773535"
+    }
+  ],
+  "source_sha256": "868e14c39072ef2b0f27da35709dcc07961ea4909dd5f870bd890388a02fb7b3",
+  "materials_exact": true,
+  "asset": "enemy-b",
+  "original_file": "docs/enemy2.glb",
+  "source_triangles": 935198,
+  "output": "public\\assets\\models\\enemy-b-final.glb",
+  "sha256": "d60cc509330f559424ac7bb3d4c6caf8d347bdffe1c24626319c763ed08479ee",
+  "skin_strategy": {
+    "method": "Rigid per-triangle bone weights with split joint seams",
+    "joint_edges_split": 4394
+  }
+}

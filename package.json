@@ -11,7 +11,7 @@
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt",
-    "test": "node --test lib/game/simulation.test.js lib/game/player-model.test.js lib/game/player-animation.test.js"
+    "test": "node --test lib/game/simulation.test.js lib/game/player-model.test.js lib/game/player-animation.test.js lib/game/character-assets.test.js"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

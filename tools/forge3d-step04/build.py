@@ -287,6 +287,8 @@ def prepare_character(name,f,source):
         mesh=next(o for o in bpy.context.scene.objects if o.type=='MESH')
         simplify(mesh,f['target']);studio.WORK=OUT
         studio.render(name+'-optimized',(.6,-2,.08))
+        wire=mesh.modifiers.new('Recording wireframe','WIREFRAME');wire.thickness=.0002
+        studio.render(name+'-optimized-wire',(0,-2,.05));mesh.modifiers.remove(wire)
         bpy.context.scene['optimized_target']=f['target']
         bpy.ops.wm.save_as_mainfile(filepath=str(optimized))
         return mesh
