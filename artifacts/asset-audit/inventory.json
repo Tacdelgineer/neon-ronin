@@ -1,0 +1,602 @@
+[
+  {
+    "id": "asset-01",
+    "filename": "docs/ChatGPT Image Sep 16 2026 04_51_53 PM (1).glb",
+    "sha256": "d88664afe50d7f4e27678d903a4e87967e28a525b5ede0d4abd4ad2fc200e1e5",
+    "bytes": 38434880,
+    "dimensions_blender": [
+      1.0019745826721191,
+      0.15711058676242828,
+      0.9820045828819275
+    ],
+    "bounds_blender": [
+      [
+        -0.5009963512420654,
+        -0.078559011220932,
+        -0.4914109706878662
+      ],
+      [
+        0.5009782314300537,
+        0.07855157554149628,
+        0.4905936121940613
+      ]
+    ],
+    "object_count": 1,
+    "mesh_count": 1,
+    "source_triangles": 949360,
+    "imported_triangles": 949262,
+    "materials": [
+      {
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "roughnessFactor": 1.0,
+          "metallicFactor": 1.0,
+          "metallicRoughnessTexture": {
+            "index": 1
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "doubleSided": false
+      }
+    ],
+    "textures": [
+      {
+        "name": "Image_0",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "sRGB"
+      },
+      {
+        "name": "Image_1",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "Non-Color"
+      }
+    ],
+    "skeleton": false,
+    "skin": false,
+    "animation_clips": [],
+    "previews": [
+      "artifacts/asset-audit/asset-01-front.png",
+      "artifacts/asset-audit/asset-01-angle.png",
+      "artifacts/asset-audit/asset-01-back.png"
+    ]
+  },
+  {
+    "id": "asset-02",
+    "filename": "docs/ChatGPT Image Sep 16 2026 04_51_56 PM.glb",
+    "sha256": "a1ba45574362b60b71ba93b7c6591e958f7f2cc0ac6a18c8c63c4d6deb998105",
+    "bytes": 43648164,
+    "dimensions_blender": [
+      1.0006370544433594,
+      0.5664654970169067,
+      0.6373628377914429
+    ],
+    "bounds_blender": [
+      [
+        -0.5001867413520813,
+        -0.2832728922367096,
+        -0.3138221800327301
+      ],
+      [
+        0.5004502534866333,
+        0.28319263458251953,
+        0.3235406279563904
+      ]
+    ],
+    "object_count": 1,
+    "mesh_count": 1,
+    "source_triangles": 976607,
+    "imported_triangles": 976600,
+    "materials": [
+      {
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "roughnessFactor": 1.0,
+          "metallicFactor": 1.0,
+          "metallicRoughnessTexture": {
+            "index": 1
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "doubleSided": false
+      }
+    ],
+    "textures": [
+      {
+        "name": "Image_0",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "sRGB"
+      },
+      {
+        "name": "Image_1",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "Non-Color"
+      }
+    ],
+    "skeleton": false,
+    "skin": false,
+    "animation_clips": [],
+    "previews": [
+      "artifacts/asset-audit/asset-02-front.png",
+      "artifacts/asset-audit/asset-02-angle.png",
+      "artifacts/asset-audit/asset-02-back.png"
+    ]
+  },
+  {
+    "id": "asset-03",
+    "filename": "docs/ChatGPT Image Sep 16 2026 04_51_57 PM.glb",
+    "sha256": "3ce35861c11162debcd09e7062915f6a4833b27ec2e17382df605c5306176b83",
+    "bytes": 39232356,
+    "dimensions_blender": [
+      0.377069890499115,
+      0.08479516208171844,
+      0.9925675392150879
+    ],
+    "bounds_blender": [
+      [
+        -0.18854838609695435,
+        -0.042289722710847855,
+        -0.49287495017051697
+      ],
+      [
+        0.18852150440216064,
+        0.04250543564558029,
+        0.49969255924224854
+      ]
+    ],
+    "object_count": 1,
+    "mesh_count": 1,
+    "source_triangles": 966776,
+    "imported_triangles": 966768,
+    "materials": [
+      {
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "roughnessFactor": 1.0,
+          "metallicFactor": 1.0,
+          "metallicRoughnessTexture": {
+            "index": 1
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "doubleSided": false
+      }
+    ],
+    "textures": [
+      {
+        "name": "Image_0",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "sRGB"
+      },
+      {
+        "name": "Image_1",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "Non-Color"
+      }
+    ],
+    "skeleton": false,
+    "skin": false,
+    "animation_clips": [],
+    "previews": [
+      "artifacts/asset-audit/asset-03-front.png",
+      "artifacts/asset-audit/asset-03-angle.png",
+      "artifacts/asset-audit/asset-03-back.png"
+    ]
+  },
+  {
+    "id": "asset-04",
+    "filename": "docs/ChatGPT Image Sep 16 2026 04_55_07 PM.glb",
+    "sha256": "33c627006dccdfcd56e22548e3a1626269aa064feb4a995aac695f7da9712cbd",
+    "bytes": 38142200,
+    "dimensions_blender": [
+      0.14470618963241577,
+      1.001610517501831,
+      0.4915911555290222
+    ],
+    "bounds_blender": [
+      [
+        -0.07507804036140442,
+        -0.5006986260414124,
+        -0.21669596433639526
+      ],
+      [
+        0.06962814182043076,
+        0.5009118318557739,
+        0.27489519119262695
+      ]
+    ],
+    "object_count": 1,
+    "mesh_count": 1,
+    "source_triangles": 958449,
+    "imported_triangles": 958306,
+    "materials": [
+      {
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "roughnessFactor": 1.0,
+          "metallicFactor": 1.0,
+          "metallicRoughnessTexture": {
+            "index": 1
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "doubleSided": false
+      }
+    ],
+    "textures": [
+      {
+        "name": "Image_0",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "sRGB"
+      },
+      {
+        "name": "Image_1",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "Non-Color"
+      }
+    ],
+    "skeleton": false,
+    "skin": false,
+    "animation_clips": [],
+    "previews": [
+      "artifacts/asset-audit/asset-04-front.png",
+      "artifacts/asset-audit/asset-04-angle.png",
+      "artifacts/asset-audit/asset-04-back.png"
+    ]
+  },
+  {
+    "id": "asset-05",
+    "filename": "docs/ChatGPT Image Sep 16 2026 04_55_11 PM.glb",
+    "sha256": "67b718af630eaa1f9e72e4974fd16f673d81497637fe2b8201d2c9a26e65c4dc",
+    "bytes": 39925720,
+    "dimensions_blender": [
+      0.15139880776405334,
+      1.001781702041626,
+      0.9937056303024292
+    ],
+    "bounds_blender": [
+      [
+        -0.07581604272127151,
+        -0.5008769631385803,
+        -0.4951341450214386
+      ],
+      [
+        0.07558275759220123,
+        0.5009047389030457,
+        0.498571515083313
+      ]
+    ],
+    "object_count": 1,
+    "mesh_count": 1,
+    "source_triangles": 990187,
+    "imported_triangles": 989960,
+    "materials": [
+      {
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "roughnessFactor": 1.0,
+          "metallicFactor": 1.0,
+          "metallicRoughnessTexture": {
+            "index": 1
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "doubleSided": false
+      }
+    ],
+    "textures": [
+      {
+        "name": "Image_0",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "sRGB"
+      },
+      {
+        "name": "Image_1",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "Non-Color"
+      }
+    ],
+    "skeleton": false,
+    "skin": false,
+    "animation_clips": [],
+    "previews": [
+      "artifacts/asset-audit/asset-05-front.png",
+      "artifacts/asset-audit/asset-05-angle.png",
+      "artifacts/asset-audit/asset-05-back.png"
+    ]
+  },
+  {
+    "id": "asset-06",
+    "filename": "docs/ChatGPT Image Sep 16 2026 05_15_40 PM.glb",
+    "sha256": "f0b19b56113ae4d988aac11daed2a2df40e338fd9d091744b61687d07b3d19e4",
+    "bytes": 45802484,
+    "dimensions_blender": [
+      0.5235951542854309,
+      0.5173684358596802,
+      1.0008635520935059
+    ],
+    "bounds_blender": [
+      [
+        -0.26232457160949707,
+        -0.26163771748542786,
+        -0.5004454851150513
+      ],
+      [
+        0.26127058267593384,
+        0.25573068857192993,
+        0.5004180073738098
+      ]
+    ],
+    "object_count": 1,
+    "mesh_count": 1,
+    "source_triangles": 997783,
+    "imported_triangles": 997724,
+    "materials": [
+      {
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "roughnessFactor": 1.0,
+          "metallicFactor": 1.0,
+          "metallicRoughnessTexture": {
+            "index": 1
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "doubleSided": false
+      }
+    ],
+    "textures": [
+      {
+        "name": "Image_0",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "sRGB"
+      },
+      {
+        "name": "Image_1",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "Non-Color"
+      }
+    ],
+    "skeleton": false,
+    "skin": false,
+    "animation_clips": [],
+    "previews": [
+      "artifacts/asset-audit/asset-06-front.png",
+      "artifacts/asset-audit/asset-06-angle.png",
+      "artifacts/asset-audit/asset-06-back.png"
+    ]
+  },
+  {
+    "id": "asset-07",
+    "filename": "docs/enemy1.glb",
+    "sha256": "927b2e023814158a67293f44655433aecce5cf2face22dac16945866f68ec0d8",
+    "bytes": 44712680,
+    "dimensions_blender": [
+      0.5791151523590088,
+      0.40518465638160706,
+      0.9995601177215576
+    ],
+    "bounds_blender": [
+      [
+        -0.28951531648635864,
+        -0.20269514620304108,
+        -0.5005159378051758
+      ],
+      [
+        0.28959983587265015,
+        0.20248951017856598,
+        0.49904417991638184
+      ]
+    ],
+    "object_count": 1,
+    "mesh_count": 1,
+    "source_triangles": 966995,
+    "imported_triangles": 966988,
+    "materials": [
+      {
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "roughnessFactor": 1.0,
+          "metallicFactor": 1.0,
+          "metallicRoughnessTexture": {
+            "index": 1
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "doubleSided": false
+      }
+    ],
+    "textures": [
+      {
+        "name": "Image_0",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "sRGB"
+      },
+      {
+        "name": "Image_1",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "Non-Color"
+      }
+    ],
+    "skeleton": false,
+    "skin": false,
+    "animation_clips": [],
+    "previews": [
+      "artifacts/asset-audit/asset-07-front.png",
+      "artifacts/asset-audit/asset-07-angle.png",
+      "artifacts/asset-audit/asset-07-back.png"
+    ]
+  },
+  {
+    "id": "asset-08",
+    "filename": "docs/enemy2.glb",
+    "sha256": "868e14c39072ef2b0f27da35709dcc07961ea4909dd5f870bd890388a02fb7b3",
+    "bytes": 45117852,
+    "dimensions_blender": [
+      0.5043447613716125,
+      0.3382686972618103,
+      0.9982110261917114
+    ],
+    "bounds_blender": [
+      [
+        -0.2518673539161682,
+        -0.17431893944740295,
+        -0.49946215748786926
+      ],
+      [
+        0.25247740745544434,
+        0.16394974291324615,
+        0.49874889850616455
+      ]
+    ],
+    "object_count": 1,
+    "mesh_count": 1,
+    "source_triangles": 935198,
+    "imported_triangles": 935187,
+    "materials": [
+      {
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "roughnessFactor": 1.0,
+          "metallicFactor": 1.0,
+          "metallicRoughnessTexture": {
+            "index": 1
+          }
+        },
+        "alphaMode": "OPAQUE",
+        "doubleSided": false
+      }
+    ],
+    "textures": [
+      {
+        "name": "Image_0",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "sRGB"
+      },
+      {
+        "name": "Image_1",
+        "dimensions": [
+          4096,
+          4096
+        ],
+        "colorspace": "Non-Color"
+      }
+    ],
+    "skeleton": false,
+    "skin": false,
+    "animation_clips": [],
+    "previews": [
+      "artifacts/asset-audit/asset-08-front.png",
+      "artifacts/asset-audit/asset-08-angle.png",
+      "artifacts/asset-audit/asset-08-back.png"
+    ]
+  }
+]
