@@ -1,0 +1,27 @@
+{
+  "file_bytes": 6460056,
+  "triangles": 37930,
+  "meshes": 1,
+  "skins": 0,
+  "joints": [],
+  "animations": 0,
+  "images": [
+    {
+      "mime": "image/webp",
+      "bytes": 3507280,
+      "sha256": "de711d8558291627ab5c1dbb7a41a54ff9eb022bde62a397bae462d18d940d54"
+    },
+    {
+      "mime": "image/webp",
+      "bytes": 880944,
+      "sha256": "b48e8c5f2a0f824dab1873487852a1ea20ddf3a9e1e225ea2dd959e539af0a25"
+    }
+  ],
+  "source_sha256": "3ce35861c11162debcd09e7062915f6a4833b27ec2e17382df605c5306176b83",
+  "materials_exact": true,
+  "asset": "enemy-a-shield",
+  "original_file": "docs/ChatGPT Image Sep 16 2026 04_51_57 PM.glb",
+  "source_triangles": 966776,
+  "output": "public\\assets\\models\\enemy-a-shield-final.glb",
+  "sha256": "b9a504b03d5bb72cb3cce4a9dce0fe358412057a94404ee287449e6d62d3b763"
+}

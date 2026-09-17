@@ -2,6 +2,7 @@
 import bpy,sys,json
 from pathlib import Path
 from mathutils import Matrix
+from bpy_extras.object_utils import world_to_camera_view
 ROOT=Path(__file__).resolve().parents[2];WORK=ROOT/'work/forge3d-step04';OUT=ROOT/'artifacts/asset-audit'
 sys.path.insert(0,str(ROOT/'tools/forge3d-step02'))
 import inspect_source as studio
@@ -37,4 +38,10 @@ for name in names:
             for obj in weapons['hero-sheath']:obj.hide_render=clip=='attack';obj.hide_set(clip=='attack')
         bpy.context.scene.camera.data.ortho_scale=1.55 if clip=='attack' else 1.22
         studio.render(name+'-equipped-'+clip,(.65,-2,.1))
+        if clip=='idle':
+            scene=bpy.context.scene;w=scene.render.resolution_x;h=scene.render.resolution_y
+            def project(point):
+                v=world_to_camera_view(scene,scene.camera,rig.matrix_world@point)
+                return [v.x*w,(1-v.y)*h]
+            (OUT/(name+'-armature-projection.json')).write_text(json.dumps(dict(width=w,height=h,bones=[dict(name=b.name,head=project(b.head),tail=project(b.tail)) for b in rig.pose.bones]),indent=2))
         if clip=='attack':bpy.ops.wm.save_as_mainfile(filepath=str(WORK/(name+'-combat.blend')))

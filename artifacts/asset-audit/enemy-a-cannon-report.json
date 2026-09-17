@@ -1,0 +1,27 @@
+{
+  "file_bytes": 10388372,
+  "triangles": 88640,
+  "meshes": 1,
+  "skins": 0,
+  "joints": [],
+  "animations": 0,
+  "images": [
+    {
+      "mime": "image/webp",
+      "bytes": 3702012,
+      "sha256": "72f383114a6d77f6a68d7091a7f30ca18d0653b42931f25c5f2789e61ca656f9"
+    },
+    {
+      "mime": "image/webp",
+      "bytes": 1242996,
+      "sha256": "cff86de870ce92ee3b97c2018d53000b893d3ef217b238eb22eef6cf83debc5c"
+    }
+  ],
+  "source_sha256": "a1ba45574362b60b71ba93b7c6591e958f7f2cc0ac6a18c8c63c4d6deb998105",
+  "materials_exact": true,
+  "asset": "enemy-a-cannon",
+  "original_file": "docs/ChatGPT Image Sep 16 2026 04_51_56 PM.glb",
+  "source_triangles": 976607,
+  "output": "public\\assets\\models\\enemy-a-cannon-final.glb",
+  "sha256": "b821d1c21f85b871426da1cc0f0b03bf0a5419546ed8a9f747901f20dc6ed508"
+}

@@ -20,17 +20,17 @@ SOURCES={r['id'][-2:]:ROOT/r['filename'] for r in INVENTORY}
 FITS={
  'hero':dict(asset='06',target=300000,center=(.045,-.15),shoulder=.108,elbow=.155,wrist=.17,hip=.052,knee=.088,ankle=.108,
              sy=.005,ey=.015,wy=.018,hy=.005,ky=.002,ay=.005,sz=.258,ez=.14,wz=.028,kz=-.225,az=-.444),
- 'enemy-a':dict(asset='07',target=100000,center=(0,0),shoulder=.24,elbow=.25,wrist=.25,hip=.11,knee=.165,ankle=.232,
+ 'enemy-a':dict(asset='07',target=220000,center=(0,0),shoulder=.24,elbow=.25,wrist=.25,hip=.11,knee=.165,ankle=.232,
              sy=.025,ey=.025,wy=.025,hy=.01,ky=.005,ay=.005,sz=.25,ez=.15,wz=.04,kz=-.235,az=-.44),
- 'enemy-b':dict(asset='08',target=120000,center=(0,0),shoulder=.135,elbow=.195,wrist=.221,hip=.10,knee=.132,ankle=.179,
+ 'enemy-b':dict(asset='08',target=260000,center=(0,0),shoulder=.135,elbow=.195,wrist=.221,hip=.10,knee=.132,ankle=.179,
              sy=-.025,ey=-.035,wy=-.04,hy=.01,ky=.085,ay=.085,sz=.29,ez=.135,wz=-.045,kz=-.225,az=-.445),
 }
 WEAPONS={
  'hero-katana':('05',14000,.49,-1,.13),
  'hero-sheath':('04',8000,.44,-1,.04),
- 'enemy-a-cannon':('02',22000,.41,0,.09),
- 'enemy-a-shield':('03',8000,.47,1,.5),
- 'enemy-b-blade':('01',18000,.56,1,.14),
+ 'enemy-a-cannon':('02',55000,.41,0,.09),
+ 'enemy-a-shield':('03',24000,.47,1,.5),
+ 'enemy-b-blade':('01',32000,.56,1,.14),
 }
 
 def clear():
@@ -280,7 +280,16 @@ def prepare_character(name,f,source):
     optimized=WORK/(name+'-optimized.blend')
     if optimized.exists():
         bpy.ops.wm.open_mainfile(filepath=str(optimized))
-        return next(o for o in bpy.context.scene.objects if o.type=='MESH')
+        mesh=next(o for o in bpy.context.scene.objects if o.type=='MESH')
+        if bpy.context.scene.get('optimized_target',300000 if name=='hero' else -1)==f['target']:return mesh
+        # Reuse normalized source checkpoint when increasing detail after visual QA.
+        bpy.ops.wm.open_mainfile(filepath=str(WORK/(name+'-source.blend')))
+        mesh=next(o for o in bpy.context.scene.objects if o.type=='MESH')
+        simplify(mesh,f['target']);studio.WORK=OUT
+        studio.render(name+'-optimized',(.6,-2,.08))
+        bpy.context.scene['optimized_target']=f['target']
+        bpy.ops.wm.save_as_mainfile(filepath=str(optimized))
+        return mesh
     clear();mesh=load(source)
     p=coords(mesh);scale=1.00165528/(p[:,2].max()-p[:,2].min())
     p[:,:2]-=np.array(f['center']);p*=scale;p[:,2]+=-.500839-p[:,2].min()
@@ -295,6 +304,7 @@ def prepare_character(name,f,source):
     studio.render(name+'-optimized',(.6,-2,.08))
     wire=mesh.modifiers.new('Recording wireframe','WIREFRAME');wire.thickness=.0002
     studio.render(name+'-optimized-wire',(0,-2,.05));mesh.modifiers.remove(wire)
+    bpy.context.scene['optimized_target']=f['target']
     bpy.ops.wm.save_as_mainfile(filepath=str(optimized))
     return mesh
 
