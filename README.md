@@ -1,17 +1,29 @@
 # Neon Ronin
 
-A compact third-person 3D combat game built with Three.js, React, and Vinext. Three ruined techno-temple arenas, a red energy katana, and three escalating waves. Character GLBs use local files during development and a configurable external asset base in hosted builds. The game needs no accounts, gameplay server, or audio downloads.
+A compact third-person katana combat game set across three ruined techno-temple arenas. Built with React, Vinext, Three.js, and WebGL.
 
-## Run
+![The Neon Ronin hero wielding the red energy katana against mechanical enemies](docs/images/game/hero-energy-katana-combat.png)
+
+Three escalating waves mix melee drones, ranged sentinels, telegraphed attacks, dodge invulnerability, combo strikes, and a heavy finisher. The camera keeps an elevated isometric style with bounded orbit and zoom. A full encounter takes roughly 3–5 minutes.
+
+![Neon Ronin title screen in The Silent Shrine](docs/images/game/title-screen.png)
+
+## Run locally
+
+Install [Git LFS](https://git-lfs.com/) and Node.js 22.13.0 or newer, then run:
 
 ```sh
-npm install
+git lfs install
+git clone https://github.com/Tacdelgineer/neon-ronin.git
+cd neon-ronin
+git lfs pull
+npm ci
 npm run dev
 ```
 
-Open the local address printed by the server. Requires a desktop browser with WebGL, a keyboard, and a mouse. Audio starts after entering the shrine. The game pauses when the window loses focus.
+Open the local URL printed by Vinext, normally `http://localhost:3000`. No environment file, account, cloud service, or Blender installation is required. The clone contains the runtime GLBs through Git LFS, and an unset `VITE_ASSET_BASE_URL` loads them from `public/assets/models`.
 
-For production, host the runtime GLBs in Cloudflare R2 and set `VITE_ASSET_BASE_URL` before building. See [R2 asset deployment](docs/DEPLOYMENT.md) for the exact upload set and setup steps.
+The title screen should show The Silent Shrine. After selecting **Enter the Shrine**, detailed Forge3D hero and enemy models should replace the simple procedural fallback actors. If only the fallback characters remain, run `git lfs pull` and check the browser console for GLB loading errors.
 
 ## Controls
 
@@ -27,13 +39,13 @@ For production, host the runtime GLBs in Cloudflare R2 and set `VITE_ASSET_BASE_
 | Escape | Pause / resume |
 | Enter | Start or immediately restart after victory / defeat |
 
-## Encounter
+## Architecture
 
-Wave 1 introduces three melee drones. Wave 2 adds a ranged sentinel and one reinforcement group. The final wave has four drones and a sentinel, with two reinforcement groups and quicker pressure. At most five enemies are active. The encounter has 26 enemies in total, with only two enemy types. Each inter-wave break restores some vitality. Enemy destruction also restores a small amount.
+The browser UI in `app/page.tsx` creates the Three.js game in `lib/game/engine.js`. The engine owns rendering, camera, input, effects, audio, and scene lifecycle. `lib/game/simulation.js` remains the renderer-independent gameplay authority, while `lib/game/world.js` creates the three arena variants and procedural fallback actors. GLB presentation is split between `player-model.js`, `enemy-model.js`, and `player-animation.js`.
 
-Sentinels charge for 1.35 seconds, stop tracking aim in the final 0.28 seconds, then fire a visible projectile. Pillars block projectiles and sword strikes. Dodging provides a short invulnerable window followed by recovery. Enemy damage and telegraphs remain active during player attacks.
+See [AGENTS.md](AGENTS.md) for a file-by-file repository map and safe working rules. The Blender/Forge3D authoring scripts remain under `tools/forge3d-step02`, `tools/forge3d-step03`, and `tools/forge3d-step04`.
 
-## Checks
+## Validate
 
 ```sh
 npm test
@@ -41,16 +53,16 @@ npm run typecheck
 npm run build
 ```
 
-The deterministic combat suite covers normalized movement, arena and pillar collisions, combo damage, heavy cooldown, strike direction and occlusion, dodge invulnerability, sentinel aim lock, defeat/restart, pause, wave counts and concurrency, and a full encounter using normal movement and combat inputs. The scripted perfect-reaction run takes about 2 minutes 26 seconds; normal manual play is intended to take 3–5 minutes. Manual pacing and difficulty feedback are welcome.
+The Node suite covers simulation, collisions, combat, wave completion, real GLB payloads, animation clips, and weapon sockets. The current command reports 23 passing tests.
 
-Browser checks confirmed the rendered arena, start/restart, movement, attacks, dodge, and defeat presentation. Extended browser playtesting was stopped at the user's request so they can play manually.
+## Assets and deployment
 
-## Source
+Local development uses the Git LFS files in `public/assets/models`. Hosted builds can instead set `VITE_ASSET_BASE_URL` so the same runtime paths resolve to Cloudflare R2; R2 is not required for local play. See [R2 asset deployment](docs/DEPLOYMENT.md) for the exact upload set, CORS configuration, and production build behavior.
 
-- `lib/game/simulation.js`: renderer-independent combat and wave logic.
-- `lib/game/world.js`: fixed arena, articulated models, and animation.
-- `lib/game/engine.js`: renderer, camera, input, effects, and lifecycle.
-- `lib/game/audio.js`: synthesized action sounds and temple ambience.
-- `app/page.tsx`, `app/globals.css`: game interface.
+## Run this project with an AI coding agent
 
-Each completed wave leads through a short fade to the next arena: Silent Shrine, Ember Gates, then Moon Terrace. These reuse the same procedural art with distinct pillar layouts, floor inlays, shrine placement and lighting. Reinforcements remain in the current arena. No reference images are shipped as gameplay backgrounds.
+Paste this after cloning, or ask the agent to clone the repository first:
+
+```text
+Read README.md and AGENTS.md before changing anything. Verify the declared prerequisites, fetch Git LFS assets, install dependencies with npm ci, and start the existing development server. Fix only setup-related problems if needed. Run npm test, npm run typecheck, and npm run build, then report the local URL and any remaining manual requirement.
+```

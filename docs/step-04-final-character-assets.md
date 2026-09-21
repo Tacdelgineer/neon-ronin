@@ -62,26 +62,27 @@ Recording scenes, relative to the repository root (open with installed Blender 4
 - All final characters in the actual game renderer: `artifacts/asset-audit/final-cast-in-game.png`.
 - Final combat tableau: `artifacts/asset-audit/final-combat-scene.png`; real-input combat capture: `artifacts/asset-audit/animated-combat.png`.
 - Both enemy states: `artifacts/asset-audit/cast-idle.png`, `cast-run.png`, `cast-attack.png`, `cast-hit.png`, `cast-death.png`. These are isolated visual fixtures; the HUD retains the preceding real play session.
-- Game: run `npm run dev`, open `http://127.0.0.1:5173`, Enter to start, WASD/left-click/right-click/Space to demonstrate states.
+- Game: run `npm run dev`, open the printed URL (normally `http://localhost:3000`), Enter to start, and use WASD/left-click/right-click/Space to demonstrate states.
 
 Select the armature, enter Pose Mode, and use the Dope Sheet's Action Editor to choose a clip; set the frame range to its action and press Space. Intermediate blends are ignored; scripts reproduce them. Inventory/previews/reports and final LFS GLBs are durable.
 
-For a live recording with all three types, clear Wave 1 and record Wave 2: melee B enemies and the ranged A sentinel appear with the hero. The final wave naturally provides the five-enemy scene. The smoke-test tableaus use a closer test-only camera; production camera code is unchanged. Open any scene directly with `& 'D:\Blender\blender.exe' 'D:\1MDrive\ProjectsM\AIGame\work\forge3d-step04\hero-combat.blend'` (substitute the filename above). In source/optimized blends, select the mesh and press Z → Wireframe. In attachment scenes, katana is hidden on idle; use `hero-combat.blend` for the visible hand-held weapon. For enemy actions use idle 0–72, run/attack 0–30, hit 0–9, death 0–24. Hero uses idle 0–72, run 0–20, attack 0–18, dodge 0–9; scene FPS is 30.
+For a live recording with all three types, clear Wave 1 and record Wave 2: melee B enemies and the ranged A sentinel appear with the hero. The final wave naturally provides the five-enemy scene. The smoke-test tableaus use a closer test-only camera; production camera code is unchanged. Open a scene from the repository root with `& $blenderExe 'work/forge3d-step04/hero-combat.blend'` after setting `$blenderExe` as shown below. In source/optimized blends, select the mesh and press Z → Wireframe. In attachment scenes, katana is hidden on idle; use `hero-combat.blend` for the visible hand-held weapon. For enemy actions use idle 0–72, run/attack 0–30, hit 0–9, death 0–24. Hero uses idle 0–72, run 0–20, attack 0–18, dodge 0–9; scene FPS is 30.
 
 Reproduce from the repository root with existing installed software:
 
 ```powershell
-& 'D:\Blender\blender.exe' --background --python-exit-code 1 --python tools/forge3d-step04/audit.py
+$blenderExe = 'blender' # Or the Blender executable on your system.
+& $blenderExe --background --python-exit-code 1 --python tools/forge3d-step04/audit.py
 node tools/forge3d-step04/contact-sheet.mjs
-& 'D:\Blender\blender.exe' --background --python-exit-code 1 --python tools/forge3d-step04/build.py
-& 'D:\Blender\blender.exe' --background --python-exit-code 1 --python tools/forge3d-step04/validate.py
-& 'D:\Blender\blender.exe' --background --python-exit-code 1 --python tools/forge3d-step04/assemble.py
+& $blenderExe --background --python-exit-code 1 --python tools/forge3d-step04/build.py
+& $blenderExe --background --python-exit-code 1 --python tools/forge3d-step04/validate.py
+& $blenderExe --background --python-exit-code 1 --python tools/forge3d-step04/assemble.py
 node tools/forge3d-step04/armature-overlays.mjs
 npm test
 npx --no-install tsc --noEmit --incremental false
 npm run build
 # Existing dev server running; bundled Playwright, installed Edge:
-$env:NODE_PATH='C:\Users\nodal\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\node_modules'
+$env:NODE_PATH='<path-to-node_modules-containing-playwright>'
 node tools/forge3d-step04/browser-smoke.cjs
 ```
 

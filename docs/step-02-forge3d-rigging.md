@@ -13,7 +13,7 @@ The existing Forge3D player now loads as a skinned character with a small humano
 - The source is **`public/assets/models/neon-ronin-forge3d.glb`**, served at `/assets/models/neon-ronin-forge3d.glb`. It was never overwritten or re-exported.
 - Source SHA-256 remains `fa5d87a1fd477b8b95aa3fa0f68e712c3f20498baaf6dd4baa62fa2ffafb3cbd`.
 
-The checkout is currently accessible at `D:\1MDrive\ProjectsM\AIGame`; the former `M:` drive mapping is unavailable in this session.
+All paths below are repository-relative so the scripts can be reproduced from any checkout.
 
 ## Game audit before changing the model
 
@@ -49,7 +49,7 @@ Inspection also found fused contacts around gloves, clothing, and accessories. T
 
 ## Blender and repeatable scripts
 
-Used the already installed **Blender 4.3.2**, executable **`D:\Blender\blender.exe`**. Nothing was installed, and startup defaults were not changed.
+Asset processing used **Blender 4.3.2**. Set `$blenderExe` to `blender` when it is on `PATH`, or to the Blender executable on your system. No Blender startup defaults need to change.
 
 These scripts are specific to this character and its existing coordinate system:
 
@@ -69,7 +69,7 @@ Local intermediate blends, full-resolution PNGs, logs, and reports are under ign
 Run from the repository root in PowerShell:
 
 ```powershell
-$blenderExe = 'D:\Blender\blender.exe'
+$blenderExe = 'blender' # Or the Blender executable on your system.
 foreach ($script in @('inspect_source.py','optimize.py','rig.py','skin.py','export_rigged.py','validate_export.py')) {
     & $blenderExe --background --python-exit-code 1 --python "tools/forge3d-step02/$script"
     if ($LASTEXITCODE -ne 0) { throw "Blender stage failed: $script" }

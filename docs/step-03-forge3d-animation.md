@@ -15,7 +15,7 @@ The player now plays four skeletal animation clips: **idle, run, attack, and dod
 
 ## Clips and authoring
 
-Used the existing `D:\Blender\blender.exe`, Blender **4.3.2**. No software, plugins, or dependencies were installed. No Blender startup settings were changed.
+Asset processing used **Blender 4.3.2** with no extra Blender plugins or startup-setting changes.
 
 | Clip | Authored duration | Behavior |
 | --- | ---: | --- |
@@ -76,8 +76,9 @@ These are basic authored clips suitable for the current game, with limits inheri
 ## Reproduction and review
 
 ```powershell
-& 'D:\Blender\blender.exe' --background --python-exit-code 1 --python tools/forge3d-step03/animate.py
-& 'D:\Blender\blender.exe' --background --python-exit-code 1 --python tools/forge3d-step03/validate.py
+$blenderExe = 'blender' # Or the Blender executable on your system.
+& $blenderExe --background --python-exit-code 1 --python tools/forge3d-step03/animate.py
+& $blenderExe --background --python-exit-code 1 --python tools/forge3d-step03/validate.py
 npm test
 npx --no-install tsc --noEmit --incremental false
 npm run build

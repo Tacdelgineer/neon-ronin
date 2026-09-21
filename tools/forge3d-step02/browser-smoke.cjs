@@ -15,7 +15,7 @@ const out=path.join(root,'work/forge3d-step02');fs.mkdirSync(out,{recursive:true
    body=body.replace(/this\.mount\s*=\s*mount/,'window.__step02engine=this;this.mount=mount');
    await route.fulfill({response,body});
  });
- await page.goto(process.env.GAME_URL||'http://localhost:5173');
+ await page.goto(process.env.GAME_URL||'http://localhost:3000');
  await page.waitForFunction(()=>window.__step02engine?.playerModel,{timeout:60000});
  await page.waitForTimeout(1800);
  const model=await page.evaluate(()=>{
