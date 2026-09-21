@@ -7,11 +7,12 @@
   },
   "scripts": {
     "dev": "vinext dev",
-    "build": "vinext build && node scripts/prepare-hosted-assets.mjs",
+    "build": "vinext build && node scripts/exclude-external-assets.mjs",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt",
-    "test": "node --test lib/game/simulation.test.js lib/game/player-model.test.js lib/game/player-animation.test.js lib/game/character-assets.test.js lib/game/runtime-glb.test.js"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test lib/game/simulation.test.js lib/game/player-model.test.js lib/game/player-animation.test.js lib/game/character-assets.test.js"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

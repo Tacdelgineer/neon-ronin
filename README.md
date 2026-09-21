@@ -1,6 +1,6 @@
 # Neon Ronin
 
-A compact third-person 3D combat game built with Three.js, React, and Vinext. Three ruined techno-temple arenas, a red energy katana, and three escalating waves. Character GLBs and procedural scenery are served locally; the game needs no accounts, gameplay server, or audio downloads.
+A compact third-person 3D combat game built with Three.js, React, and Vinext. Three ruined techno-temple arenas, a red energy katana, and three escalating waves. Character GLBs use local files during development and a configurable external asset base in hosted builds. The game needs no accounts, gameplay server, or audio downloads.
 
 ## Run
 
@@ -10,6 +10,8 @@ npm run dev
 ```
 
 Open the local address printed by the server. Requires a desktop browser with WebGL, a keyboard, and a mouse. Audio starts after entering the shrine. The game pauses when the window loses focus.
+
+For production, host the runtime GLBs in Cloudflare R2 and set `VITE_ASSET_BASE_URL` before building. See [R2 asset deployment](docs/DEPLOYMENT.md) for the exact upload set and setup steps.
 
 ## Controls
 
@@ -35,7 +37,7 @@ Sentinels charge for 1.35 seconds, stop tracking aim in the final 0.28 seconds, 
 
 ```sh
 npm test
-npx tsc --noEmit
+npm run typecheck
 npm run build
 ```
 
